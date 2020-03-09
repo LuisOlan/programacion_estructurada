@@ -4,37 +4,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	float n,n2,r;
-	char c;
-	printf("WELCOME TO SIMPLE CALCULATOR\n");
-	printf("---------------------------------\n");
-	printf("Ingresa el primer digito\n");
-	scanf("%f",&n);
-	printf("Ingresa un segundo digito\n");
-	scanf("%f",&n2);
-	printf("Ingresa la operacion\n");
-	scanf(" %c",&c);
-	
-	switch (c){
-		case '+':
-			r = n+n2;
-			break;
-		case '-':
-			r = n-n2;
-			break;
-		case '*':
-			r = n*n2;
-			break;
-		case '/':
-			r = n/n2;
-			break;
-			
-		default:
-			printf("Invalid operator");
-		
-	}
-	printf("%f %c %f = %f",n,c,n2,r);
-	
-	
+	int i=0,n,p,sum=0;
+	printf("Dame un numero\n");
+	scanf("%d",&n);
+	if(n<0){
+		printf("Este numero no es valido\n");
+		}
+		else
+		do{
+			i=i+1;
+			sum=sum+n;
+			printf("Dame un numero\n");
+			scanf("%d",&n);	
+		}
+		while(n>=0);
+	p=sum/i;
+	printf("Promedio:%d",p);	
 	return 0;
 }
